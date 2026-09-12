@@ -73,21 +73,5 @@ A production-ready **Spring Boot Microservices Ecosystem** designed for scalable
 
 ## 🏗 System Architecture Overview
 
-                               ┌───────────────────┐
-                               │    API Gateway    │
-                               └─────────┬─────────┘
-                                         │
-        ┌────────────────────────────────┼────────────────────────────────┐
-        │                                │                                │
-        ▼                                ▼                                ▼
-┌──────────────┐                 ┌──────────────┐                 ┌──────────────┐
-│ User Service │                 │ActivityServ. │                 │  AI Service  │
-│ (PostgreSQL) │                 │  (MongoDB)   │                 │ (Grok AI API)│
-└───────┬──────┘                 └───────┬──────┘                 └───────▲──────┘
-        │                                │                                │
-        │ Auth & User Metadata           │ Publishes Activity Event       │ Consumes Events &
-        ▼                                ▼                                │ Requests Insights
- ┌─────────────┐                 ┌──────────────┐                         │
- │  Keycloak   │                 │   RabbitMQ   ├─────────────────────────┘
- │ (OAuth2/JWT)│                 └──────────────┘
- └─────────────┘
+                              <img width="247" height="167" alt="image" src="https://github.com/user-attachments/assets/5bebdfdd-afae-4fd8-8282-fd7db4b0a62f" />
+
