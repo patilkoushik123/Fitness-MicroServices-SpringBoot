@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: activity-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/fitnessactivity
+      database: fitnessactivity
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: testadmin
+    password: Admin@123
+    publisher-confirm-type: correlated
+    publisher-returns: true
+
+server:
+  port: 8099
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# =====================================================
+# CUSTOM RABBITMQ PROPERTIES (ROOT LEVEL)
+# =====================================================
+rabbitmq:
+  queue:
+    name: activity.queue
+  exchange:
+    name: fitness.exchange
+  routing:
+    key: activity.tracking

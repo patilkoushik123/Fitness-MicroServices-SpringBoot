@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: ai-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/fitnessrecommendations
+      database: fitnessrecommendations
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: testadmin
+    password: Admin@123
+    publisher-confirm-type: correlated
+    publisher-returns: true
+
+server:
+  port: 8093
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+rabbitmq:
+  queue:
+    name: activity.queue
+  exchange:
+    name: fitness.exchange
+  routing:
+    key: activity.tracking
+
+# 🔥 GROQ CONFIGURATION (AI PROVIDER)
+groq:
+  api:
+    url: https://api.groq.com/openai/v1/chat/completions
+    model: llama-3.1-8b-instant
