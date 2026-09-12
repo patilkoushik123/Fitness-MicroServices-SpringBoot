@@ -72,6 +72,9 @@ A production-ready **Spring Boot Microservices Ecosystem** designed for scalable
 * **RabbitMQ Server**
 
 ## 🏗 System Architecture Overview
+<img width="562" height="372" alt="Screenshot 2026-09-12 170935" src="https://github.com/user-attachments/assets/1fc2c040-7e9c-4e7f-a039-4ebbb3c956b7" />
 
-                              <img width="247" height="167" alt="image" src="https://github.com/user-attachments/assets/5bebdfdd-afae-4fd8-8282-fd7db4b0a62f" />
+
+
+
 
